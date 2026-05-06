@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gugugaga Penguin Reference — Meme Origin & AI Prompts</title>
+<meta name="description" content="A reference page for the viral Gugugaga Penguin (咕咕嘎嘎企鹅 / Gugu Gaga Penguin) AI meme from Arknights: Endfield. Origin story, tool stack, and starter prompts.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght,SOFT@0,9..144,400..900,0..100;1,9..144,400..900,0..100&family=Crimson+Pro:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --paper: #FAF7F2;
+    --paper-warm: #F4EFE6;
+    --paper-cool: #EFF1EC;
+    --ink: #1F1B16;
+    --ink-soft: #4A4239;
+    --ink-fade: #8B8175;
+    --sage: #8B9D7E;
+    --sage-deep: #5C7351;
+    --camel: #C9A582;
+    --rose: #E8C5C0;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: var(--paper);
+    color: var(--ink);
+    font-family: 'Crimson Pro', Georgia, serif;
+    font-size: 18px;
+    line-height: 1.65;
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+  }
+
+  body::before {
+    content: "";
+    position: fixed; inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 0.12 0 0 0 0 0.10 0 0 0 0 0.08 0 0 0 0.045 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    pointer-events: none; z-index: 1;
+    mix-blend-mode: multiply; opacity: 0.55;
+  }
+
+  body::after {
+    content: "";
+    position: fixed; inset: 0;
+    background:
+      radial-gradient(ellipse 60% 40% at 5% 0%, rgba(139, 157, 126, 0.18) 0%, transparent 50%),
+      radial-gradient(ellipse 50% 30% at 95% 90%, rgba(201, 165, 130, 0.15) 0%, transparent 50%);
+    pointer-events: none; z-index: 0;
+  }
+
+  main, header, footer { position: relative; z-index: 2; }
+
+  header {
+    max-width: 720px;
+    margin: 0 auto;
+    padding: 56px 24px 16px;
+  }
+
+  .eyebrow {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: 'opsz' 14, 'SOFT' 50, 'wght' 400;
+    font-style: italic;
+    font-size: 16px;
+    color: var(--ink-fade);
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .eyebrow::before {
+    content: "";
+    width: 32px;
+    height: 1px;
+    background: var(--ink-fade);
+  }
+
+  h1 {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: 'opsz' 144, 'SOFT' 100, 'wght' 500;
+    font-size: clamp(36px, 6vw, 56px);
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    margin-bottom: 16px;
+  }
+  h1 em {
+    font-style: italic;
+    color: var(--sage-deep);
+  }
+
+  .subtitle {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: 'opsz' 24, 'wght' 400;
+    font-style: italic;
+    font-size: 17px;
+    color: var(--ink-fade);
+    margin-bottom: 4px;
+  }
+  .subtitle code {
+    font-family: 'Fraunces', serif;
+    background: rgba(139, 157, 126, 0.12);
+    padding: 1px 6px;
+    border-radius: 3px;
+    color: var(--sage-deep);
+    font-style: normal;
+  }
+
+  .lead {
+    font-size: 19px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    margin: 24px 0 8px;
+    max-width: 620px;
+    font-style: italic;
+    font-family: 'Fraunces', serif;
+    font-variation-settings: 'opsz' 24, 'SOFT' 70;
+    border-left: 2px solid var(--sage);
+    padding-left: 22px;
+  }
+
+  main { max-width: 720px; margin: 0 auto; padding: 16px 24px; }
+
+  h2 {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: 'opsz' 72, 'SOFT' 80, 'wght' 500;
+    font-size: 26px;
+    line-height: 1.2;
+    margin: 48px 0 16px;
+    position: relative;
+    padding-left: 22px;
+  }
+  h2::before {
+    content: "✦";
+    position: absolute;
+    left: 0;
+    top: 12px;
+    color: var(--camel);
+    font-size: 14px;
+  }
+
+  p {
+    margin-bottom: 18px;
+    color: var(--ink-soft);
+    font-size: 17px;
+  }
+  p strong { color: var(--ink); font-weight: 500; }
+  a {
+    color: var(--sage-deep);
+    text-decoration: underline;
+    text-decoration-thickness: 1px;
+    text-underline-offset: 3px;
+    text-decoration-color: rgba(139, 157, 126, 0.5);
+  }
+  a:hover { text-decoration-color: var(--sage); }
+
+  .timeline {
+    list-style: none;
+    border-left: 2px solid var(--camel);
+    padding-left: 22px;
+    margin: 16px 0 28px;
+  }
+  .timeline li {
+    position: relative;
+    padding: 10px 0;
+    border-bottom: 1px dotted rgba(31, 27, 22, 0.12);
+  }
+  .timeline li:last-child { border-bottom: none; }
+  .timeline li::before {
+    content: "";
+    position: absolute;
+    left: -28px;
+    top: 18px;
+    width: 8px;
+    height: 8px;
+    background: var(--camel);
+    border-radius: 50%;
+  }
+  .timeline .when {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: 'opsz' 14, 'wght' 500;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--sage-deep);
+    margin-bottom: 4px;
+  }
+  .timeline .what {
+    font-size: 15.5px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+  }
+
+  .tools {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 10px;
+    margin: 14px 0 28px;
+  }
+  @media (min-width: 520px) {
+    .tools { grid-template-columns: 1fr 1fr; }
+  }
+  .tool {
+    background: var(--paper-cool);
+    padding: 12px 16px;
+    border-radius: 4px;
+    border-left: 2px solid var(--sage);
+  }
+  .tool-name {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: 'opsz' 24, 'wght' 600;
+    font-size: 15px;
+    color: var(--ink);
+    margin-bottom: 2px;
+  }
+  .tool-use {
+    font-size: 13px;
+    color: var(--ink-fade);
+    line-height: 1.5;
+  }
+  .tool-use code {
+    font-family: 'Fraunces', serif;
+    background: rgba(139, 157, 126, 0.12);
+    padding: 0 4px;
+    border-radius: 3px;
+    color: var(--sage-deep);
+  }
+
+  /* Prompt example block */
+  .prompt-block {
+    background: var(--paper-warm);
+    border: 1px solid rgba(31, 27, 22, 0.08);
+    border-radius: 4px;
+    padding: 22px 24px;
+    margin: 16px 0;
+    position: relative;
+  }
+  .prompt-block::before {
+    content: "";
+    position: absolute;
+    inset: 6px;
+    border: 1px solid rgba(139, 157, 126, 0.15);
+    border-radius: 2px;
+    pointer-events: none;
+  }
+  .prompt-label {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: 'opsz' 14, 'wght' 500;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.16em;
+    color: var(--sage-deep);
+    margin-bottom: 10px;
+  }
+  .prompt-text {
+    font-family: 'Crimson Pro', monospace;
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: var(--ink-soft);
+    white-space: pre-wrap;
+    word-break: break-word;
+  }
+
+  .source-cta {
+    background: linear-gradient(135deg, rgba(139, 157, 126, 0.18) 0%, rgba(201, 165, 130, 0.18) 100%);
+    border: 1px solid rgba(139, 157, 126, 0.4);
+    border-radius: 4px;
+    padding: 28px 26px;
+    margin: 40px 0;
+    position: relative;
+    overflow: hidden;
+  }
+  .source-cta::before {
+    content: "✦";
+    position: absolute;
+    top: -16px; right: -8px;
+    font-size: 80px;
+    color: rgba(139, 157, 126, 0.35);
+    line-height: 1;
+  }
+  .source-cta-eyebrow {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: 'opsz' 14, 'wght' 500;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.18em;
+    color: var(--sage-deep);
+    margin-bottom: 10px;
+  }
+  .source-cta h3 {
+    font-family: 'Fraunces', serif;
+    font-variation-settings: 'opsz' 72, 'SOFT' 100, 'wght' 600;
+    font-size: 22px;
+    line-height: 1.2;
+    margin-bottom: 10px;
+    color: var(--ink);
+  }
+  .source-cta p {
+    color: var(--ink-soft);
+    margin-bottom: 16px;
+    font-size: 16px;
+  }
+  .source-cta a.button {
+    display: inline-block;
+    font-family: 'Fraunces', serif;
+    font-variation-settings: 'opsz' 24, 'wght' 500;
+    font-size: 14.5px;
+    background: var(--sage-deep);
+    color: var(--paper);
+    padding: 10px 22px;
+    border-radius: 100px;
+    text-decoration: none;
+    letter-spacing: 0.04em;
+    transition: background 0.2s, transform 0.2s;
+  }
+  .source-cta a.button:hover {
+    background: var(--ink-soft);
+    transform: translateY(-1px);
+  }
+
+  .caveat {
+    background: rgba(232, 197, 192, 0.12);
+    border: 1px dashed rgba(232, 197, 192, 0.6);
+    padding: 14px 18px;
+    border-radius: 3px;
+    font-style: italic;
+    font-size: 14.5px;
+    color: var(--ink-fade);
+    margin: 24px 0;
+    line-height: 1.6;
+  }
+
+  footer {
+    max-width: 720px;
+    margin: 80px auto 48px;
+    padding: 24px;
+    border-top: 1px solid rgba(31, 27, 22, 0.1);
+    font-size: 13.5px;
+    color: var(--ink-fade);
+    font-style: italic;
+    text-align: center;
+  }
+
+  .reveal { opacity: 0; transform: translateY(12px); animation: r 0.8s ease forwards; }
+  .reveal-1 { animation-delay: 0.1s; }
+  .reveal-2 { animation-delay: 0.25s; }
+  .reveal-3 { animation-delay: 0.4s; }
+  @keyframes r { to { opacity: 1; transform: translateY(0); } }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="eyebrow reveal reveal-1">a small reference page</div>
+  <h1 class="reveal reveal-2">Gugugaga Penguin <em>Reference</em></h1>
+  <div class="subtitle reveal reveal-2">also searched as <code>Gugu Gaga Penguin</code> · in chinese: 咕咕嘎嘎企鹅</div>
+
+  <p class="lead reveal reveal-3">
+    A reference page for the viral chibi penguin AI meme that came out of <em>Arknights: Endfield</em> in February 2026 — origin story, tool stack, and a few starter prompts.
+  </p>
+</header>
+
+<main>
+
+  <h2>What is the meme</h2>
+
+  <p>
+    <strong>Gugugaga Penguin</strong> is a viral AI-generated meme based on the <strong>Endministrator (Endmin)</strong> character from <em>Arknights: Endfield</em> by Hypergryph. The character's black-and-white outfit with yellow shoulder accents already resembled an emperor penguin, so fans started calling them "the penguin" — and someone took it the natural next step: chibi versions babbling baby-like "gugu gaga" sounds.
+  </p>
+
+  <p>
+    The first version appeared on Bilibili in February 2026 and spread to Douyin, TikTok, and X within two weeks. By March, there were Palworld mods, plushies, multiple landing pages chasing the search traffic, and at least one unresolved copyright dispute over the meme format.
+  </p>
+
+  <h2>Origin timeline</h2>
+
+  <ul class="timeline">
+    <li>
+      <div class="when">Feb 19, 2026 · Bilibili</div>
+      <div class="what">Creator <em>贱兄死顺盖</em> posts the first AI-generated chibi penguin Endmin clip with "gugu gaga" audio. The format is born.</div>
+    </li>
+    <li>
+      <div class="when">Late Feb 2026</div>
+      <div class="what">Creator <em>涂山白白喵</em> produces the definitive AI-animated versions: drinking milk, cooking, chasing butterflies. These become the templates everyone iterates from.</div>
+    </li>
+    <li>
+      <div class="when">Early March 2026</div>
+      <div class="what">Format jumps from Bilibili to Douyin, then to TikTok and X. English-language search traffic for "gugu gaga penguin" begins climbing.</div>
+    </li>
+    <li>
+      <div class="when">Mid March 2026</div>
+      <div class="what">Original creator attempts to register copyright and demand a 10% royalty from merchandise. Community pushes back. The legal status of AI-generated fan art remains unclear.</div>
+    </li>
+    <li>
+      <div class="when">Late March 2026</div>
+      <div class="what">Peak global saturation. Palworld mod replaces a vanilla character with a Gugu Gaga skin. Multiple landing pages compete for the search query.</div>
+    </li>
+  </ul>
+
+  <h2>The tool stack creators use</h2>
+
+  <p>The general workflow is: generate a still image with the chibi penguin character, then animate it into a 4-second clip, then add the "gugu gaga" voiceover. Common tools, roughly ordered by accessibility:</p>
+
+  <div class="tools">
+    <div class="tool">
+      <div class="tool-name">Seedance 2.0</div>
+      <div class="tool-use">free daily image-to-video credits · best free path</div>
+    </div>
+    <div class="tool">
+      <div class="tool-name">Kling AI</div>
+      <div class="tool-use">most popular for animating stills</div>
+    </div>
+    <div class="tool">
+      <div class="tool-name">HitPaw</div>
+      <div class="tool-use">easiest one-click animation · trial available</div>
+    </div>
+    <div class="tool">
+      <div class="tool-name">Midjourney</div>
+      <div class="tool-use">best stills · use <code>--niji 6</code> for anime</div>
+    </div>
+    <div class="tool">
+      <div class="tool-name">Stable Diffusion</div>
+      <div class="tool-use">free open-source · pair with Endmin Penguin LoRA on Civitai</div>
+    </div>
+    <div class="tool">
+      <div class="tool-name">ComfyUI + LTX</div>
+      <div class="tool-use">pro path · fully free if you have a GPU</div>
+    </div>
+  </div>
+
+  <h2>A starter prompt (image)</h2>
+
+  <p>
+    The character anchor that keeps results consistent across tools:
+  </p>
+
+  <div class="prompt-block">
+    <div class="prompt-label">image prompt · drinking milk scene</div>
+    <div class="prompt-text">chibi penguin girl in black and white penguin costume, bright yellow beak, big gray eyes, black bangs with silver clips, holding a glass of warm milk with both tiny hands, sitting on a wooden stool, cozy kitchen background, soft warm lighting, cute anime style</div>
+  </div>
+
+  <div class="prompt-block">
+    <div class="prompt-label">motion prompt · for kling / hitpaw / seedance</div>
+    <div class="prompt-text">The chibi penguin girl lifts the glass of milk to her mouth, takes a tiny sip, her eyes close happily, she kicks her feet gently. Warm cozy atmosphere, smooth gentle animation.</div>
+  </div>
+
+  <p>
+    Keep the character description identical across all your prompts — that's how you get character consistency without LoRAs. Vary only the scene and the action.
+  </p>
+
+  <div class="caveat">
+    <strong>A note on copyright —</strong> Gugugaga Penguin is fan-made AI art. The Endministrator character belongs to Hypergryph (developer of <em>Arknights: Endfield</em>). For personal use this is generally treated as fan expression. Commercial use requires more caution given the unresolved copyright dispute.
+  </div>
+
+  <div class="source-cta">
+    <div class="source-cta-eyebrow">if you want more</div>
+    <h3>50+ tested prompts, free assets, and a prompt generator</h3>
+    <p>This page covers the basics. The full archive — including a <strong>prompt generator</strong> (pick platform / tool / mood, get a complete copy-paste pack), 50+ scene library, free downloadable assets, and a complete tutorial with three workflow paths — is at <strong>GuguGagaPenguin</strong>.</p>
+    <a class="button" href="https://gugugagapenguin.com/" rel="noopener">visit gugugagapenguin.com →</a>
+  </div>
+
+  <h2>About this page</h2>
+
+  <p>
+    A small reference page hosted on GitHub Pages. Hand-coded, no analytics, no trackers. Made because the meme deserved at least one short, well-organized origin page that wasn't drowning in affiliate banners.
+  </p>
+
+</main>
+
+<footer>
+  hand-coded · hosted on github pages · fan-made content, not official Hypergryph
+</footer>
+
+</body>
+</html>
