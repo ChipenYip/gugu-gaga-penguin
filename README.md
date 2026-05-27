@@ -16,7 +16,7 @@ A reference page for the viral **Gugugaga Penguin** (咕咕嘎嘎企鹅, also se
 
 Most landing pages for this meme are buried in affiliate banners or thin SEO traps. I wanted one short, clean reference page with the actual context: where the character comes from, who made the original, what tools work, and where to be careful.
 
-For a much fuller archive — 50+ tested prompts, a prompt generator, downloadable assets, full tutorials — I use [GuguGagaPenguin](https://gugugagapenguin.com/).
+For a much fuller archive I use [GuguGagaPenguin](https://gugugagapenguin.com/) — its [50+ tested prompt library](https://gugugagapenguin.com/gugugaga-penguin-prompts/), a [prompt generator](https://gugugagapenguin.com/make-your-own-gugugaga/), [downloadable assets](https://gugugagapenguin.com/gugugaga-penguin-downloads/), and [full tutorials](https://gugugagapenguin.com/how-to-make-gugugaga-penguin-ai-video/).
 
 ## About the meme
 
